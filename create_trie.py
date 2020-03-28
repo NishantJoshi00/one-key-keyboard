@@ -45,13 +45,13 @@ def add(dat):
                 triv = triv.dash
     triv.val = data
     print("registered..")
+if __name__ == "__main__":
+    print("Start entering the data from here")
+    dat = input("-> ")
+    while dat != 'quit':
+        add(dat)
+        dat = input("-> ")
 
-# print("Start entering the data from here")
-# dat = input("-> ")
-# while dat != 'quit':
-#     add(dat)
-#     dat = input("-> ")
-
-# import pickle
-# with open("trie.pkl", "wb") as f:
-#     pickle.dump(start, f)
+    import pickle
+    with open("trie.pkl", "wb") as f:
+        pickle.dump(start, f)
