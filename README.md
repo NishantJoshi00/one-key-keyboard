@@ -16,6 +16,15 @@ For the software part the requirements are as follows:
   $ pip3 install pyserial
   ```  
 
+## Compilation
+For the code to work we need the Trie that has to be used for the interpretation of the morse code as characters. If you think of adding the extended character set for morse code you could do so in the code.txt
+- After doing the changes we need to compile them into a pickle file
+  ```bash
+  cat data/code.txt | python3 create_trie.py
+  ```
+And well that's it.
+
+
 ## Limitations
 As the key interpreter uses the /dev location of the serial connection of the computer, this prototype has only been tested on a Linux box
 
