@@ -29,6 +29,8 @@ def get(data):
         return triv.val
 
 try:
+    short_ = 20
+    long_ = 100
     count = 0
     maxi = 200
     char = 0
@@ -43,10 +45,10 @@ try:
         
         if data == char:
             count += 1
-            if data == 0 and count > 100:
+            if data == 0 and count > long_:
                 sent += cur
                 full = ''
-            if data == 1 and count > 100:
+            if data == 1 and count > long_:
                 print(" "* 70, end='\r')
                 if sent[-1] != ' ':
                     sent = sent[:-1]
@@ -56,10 +58,10 @@ try:
 
         else:
               
-            if char == 1 and count < 20:
+            if char == 1 and count < short_:
                 full += '.'
-            if char == 1 and count > 20:
-                if count > 100:
+            if char == 1 and count > short_:
+                if count > long_:
                     sent = sent[:-1]
                     full = ''
                     char = 0
